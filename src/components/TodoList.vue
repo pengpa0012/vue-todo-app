@@ -25,9 +25,11 @@ export default {
     background: #f4f4f4;
     border: solid 2px #3a3a3a;
     border-radius: 5px;
-    margin: 20px 5px;
+    margin: 20px auto;
     padding-left: 10px;
     justify-content: space-between;
+    max-width: 1000px;
+    width: 95%;
   }
 
   input{
@@ -78,7 +80,11 @@ export default {
 
   @media (max-width: 600px){
     h3{
-      font-size: 1.1rem;
+      font-size: .9rem;
+    }
+
+    .delBtn{
+      padding: 0px 15px;
     }
   }
 

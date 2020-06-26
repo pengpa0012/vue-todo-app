@@ -38,7 +38,9 @@ export default {
   form{
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem; 
+    margin: 30px auto 1rem auto; 
+    max-width: 1000px;
+    width: 95%;
   }
 
   form input[type="text"]{
@@ -82,7 +84,7 @@ export default {
       width: 95%;
       margin-bottom: 10px;
       margin-right: 0;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
 
     form input[type="submit"]{

@@ -23,23 +23,24 @@ export default {
   },
   methods: {
     delTodo(id){
-      axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`) 
-      .then(this.todos = this.todos.filter(todo => todo.id !== id)) 
-      .catch(err => console.log(err))
+      if(confirm('are you sure?')){
+         axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`) 
+          .then(this.todos = this.todos.filter(todo => todo.id !== id)) 
+          .catch(err => console.log(err))
+      }  
     },
     addTodo(newTodo){
       if(newTodo.title === "") return
  
-      this.todos = [...this.todos, newTodo]        
+      this.todos = [...this.todos, newTodo]  
+      console.log(this.todos.length)      
     },
     delAll(){
-      this.todos = this.todos.filter(todo => todo.completed == false)
+
+      if(confirm('are you sure?')){
+        this.todos = this.todos.filter(todo => todo.completed == false)
+      }
     }
-  },
-  created(){
-    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
-      .then(res => this.todos = res.data)
-      .catch(err => console.log(err))
   }
 }
 </script>
@@ -63,10 +64,7 @@ export default {
 }
 
 .content{
-  max-width: 1000px;
-  width: 95%;
   margin: auto;
-  padding: 1rem 10px;
 }
 
 @media (max-width: 660px){
