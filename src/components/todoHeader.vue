@@ -1,9 +1,8 @@
-
 <template>
-    <header>
+    <div id="header">
         <h1>Vue Todo App</h1>
         <span>Made by Godfrey Necesario</span>    
-    </header>    
+    </div>    
 </template>
 
 <script>
@@ -11,10 +10,11 @@
 export default {
     name: 'TodoHeader'
 }
+
 </script>
 
 <style scoped>
-    header{
+    #header{
         margin-bottom: 5rem;
         padding: 3rem;
     }

@@ -42,7 +42,7 @@ h3{
 }
 
 @media (max-width: 660px){
-  header{
+  #header{
     margin-bottom: 2rem !important;
   }
 
